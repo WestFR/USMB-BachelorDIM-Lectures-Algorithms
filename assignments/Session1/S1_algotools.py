@@ -74,11 +74,54 @@ print(message)
 # @param input_list : the input list to be scanned.
 # @throws an exception (ValueError) on an empty list
 def reverse_table(input_list):
-	return input_list.reverse();
+
+	lastidx = len(input_list)
+
+	for idx in xrange (len(input_list) /2) :
+		lastidx -= 1
+		poppod =  input_list[idx]
+
+		input_list[idx] = input_list[lastidx]
+		input_list[lastidx] = poppod;
+
+	# OR SIMPLY : return input_list.reverse();
 
 # Call method & display reverse table
 reverse_table(input_list);
-print(input_list)
+message = "My reverse table is : {list_value}".format(list_value = input_list);
+print(message)
+
+
+# BOUDING 
+#
+#
+#
+
+
+# Matrix processing libs
+import numpy;
+
+# Set a value in a specific cell
+size_rows = 5;
+size_cols = 5;
+myMat = numpy.zeros([size_rows, size_cols], dtype = int);
+
+# Filling something in the matrix (the basic use)
+# for row in range (0,5) :
+#	for col in range (3,5) :
+#		myMat[row, col] = 1
+
+# Filling something in the matrix (a nicer way)
+myMat[1,3] = 1
+myMat[2:4,4:5] = 1
+#myMat[2:4,3:4] = numpy.ones([3,2])
+
+print(myMat);
+
+# Output coordinate matrix
+bbox_coords = numpy.zeros([4,2], dtype =int)
+print (bbox_coords)
+
 
 
 
