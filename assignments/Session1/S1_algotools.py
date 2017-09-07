@@ -114,7 +114,7 @@ myMat = numpy.zeros([size_rows, size_cols], dtype = int);
 # Filling something in the matrix (a nicer way)
 myMat[1,3] = 1
 myMat[2:4,4:5] = 1
-#myMat[2:4,3:4] = numpy.ones([3,2])
+myMat[2:4,3:4] = numpy.ones([3,2])
 
 print(myMat);
 
