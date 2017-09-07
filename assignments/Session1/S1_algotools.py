@@ -92,19 +92,41 @@ message = "My reverse table is : {list_value}".format(list_value = input_list);
 print(message)
 
 
-# BOUDING 
-#
-#
-#
-
+# BOUDING BOX
 
 # Matrix processing libs
 import numpy;
 
 # Set a value in a specific cell
-size_rows = 5;
-size_cols = 5;
+size_rows = 10;
+size_cols = 10;
 myMat = numpy.zeros([size_rows, size_cols], dtype = int);
+
+# roi_bbox function declaration
+# @param input_image : the input list of numpy to be scanned.
+#
+def roi_bbox(input_image) :
+
+	# Set values for bouding box
+	xmin = size_cols;
+	xmax = 0;
+	ymin = size_rows;
+	ymax = 0;
+
+	for x in range(size_cols) :
+		for y in range (size_rows) :
+			if input_image[x , y] > 0 :
+				if xmin > x :
+					xmin = x;
+				if xmax < x :
+					xmax = x;
+				if ymin > y :
+					ymin = y;
+				if ymax < y :
+					ymax = y;
+
+	bbox_coords = numpy.array([[ymin,xmin] , [ymin,xmax] , [ymax,xmin] , [ymax,xmax]])
+	return bbox_coords
 
 # Filling something in the matrix (the basic use)
 # for row in range (0,5) :
@@ -113,14 +135,17 @@ myMat = numpy.zeros([size_rows, size_cols], dtype = int);
 
 # Filling something in the matrix (a nicer way)
 myMat[1,3] = 1
-myMat[2:4,4:5] = 1
-myMat[2:4,3:4] = numpy.ones([3,2])
+myMat[2:4,4:9] = 1
 
-print(myMat);
+# myMat[2:4,3:4] = numpy.ones([3,2])
+# This line broke my code (doesn't support & compile on my MAC)
 
 # Output coordinate matrix
-bbox_coords = numpy.zeros([4,2], dtype =int)
-print (bbox_coords)
+#bbox_coords = numpy.zeros([4,2], dtype =int)
+print (myMat)
+
+myMatric = roi_bbox(myMat)
+print(myMatric);
 
 
 
