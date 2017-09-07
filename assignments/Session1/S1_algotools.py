@@ -1,9 +1,15 @@
 ##
 # @author : Francony Steven
-#
 # @brief : A set of generic functions for data management
 ##
 
+# Input List
+input_list = [1,2,3,4,-7]
+
+# AVERAGING :
+# average_above_zero function declaration
+# @param input_list : the input list to be scanned.
+# @throws an exception (ValueError) on an empty list
 def average_above_zero(input_list):
 
 	# Variables
@@ -26,8 +32,7 @@ def average_above_zero(input_list):
 	average = float(positive_values_sum / float(positive_values_count));
 	return float(average);
 
-# Input List
-input_list = [1,2,3,4,-7]
+# Call method
 result = average_above_zero(input_list);
 
 # Prepare and display message
@@ -35,26 +40,45 @@ message = "The average of positive element of {list_value} is {res} ".format(lis
 print(message);
 
 
+# TABLE MAXIMUM VALUE
+# max_value function declaration
+# @param input_list : the input list to be scanned.
+# @throws an exception (ValueError) on an empty list
+def max_value(input_list):
 
-def max_values(input_list):
-
+	# First check if provided list is not empty
 	if len(input_list) == 0 :
 		raise ValueError("Provided list is empty.");
 
+	# Init max value
 	max_val = input_list[0];
 
 	# Average of positive elements of a list
 	for item in input_list :
 		# Select only positive items
-		if max_val < item :
+		if max_val < item : 
 			max_val = item
 
-	return max_val;
+	return float(max_val);
 
-myList = [1,3,7];
+# Call max_values method
+myMax = max_value(input_list);
 
-myMax = max_values(myList);
-message = "My maximum value is : {max}".format(max = myMax)
+# Prepare & display message
+message = "The maximum value of {list_value} is {max}".format(list_value = input_list, max = myMax)
 print(message)
+
+
+# RESERVE A TABLE
+# reverse_table function declaration
+# @param input_list : the input list to be scanned.
+# @throws an exception (ValueError) on an empty list
+def reverse_table(input_list):
+	return input_list.reverse();
+
+# Call method & display reverse table
+reverse_table(input_list);
+print(input_list)
+
 
 
