@@ -331,6 +331,6 @@ def sort_bubble(list_in):
 # Display message before method call
 print("list before sorting : " + str(myList))
 
-# Call sort_selective method and display messageb
+# Call sort_selective method and display message
 myList = sort_bubble(myList)
 print("list after sorting : " + str(myList))
