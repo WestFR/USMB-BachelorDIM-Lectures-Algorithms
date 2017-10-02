@@ -104,6 +104,7 @@ print(message)
 # @throws an exception (ValueError) on an empty list
 def reverse_table(input_list):
 
+	"""
 	lastidx = len(input_list)
 
 	for idx in xrange (len(input_list) /2) :
@@ -112,8 +113,8 @@ def reverse_table(input_list):
 
 		input_list[idx] = input_list[lastidx]
 		input_list[lastidx] = poppod;
-
-	# OR SIMPLY : return input_list.reverse();
+	"""
+	return input_list.reverse();
 
 # Call method & display reverse table
 reverse_table(input_list);
