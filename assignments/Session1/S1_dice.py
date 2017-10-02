@@ -1,4 +1,4 @@
-import random
+'''' import random
 
 playerPts = 0
 computerPts = 0
@@ -63,3 +63,5 @@ if playersTurn:
 	print "You win"
 else :
 	print "The computer wins"
+
+'''
