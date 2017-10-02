@@ -1,7 +1,7 @@
 organization=westfr-github
-projectKey=uit-python
+projectKey=uit-python:master
 serverUrl=https://sonarcloud.io
-serverVersion=6.5.0.27571
-dashboardUrl=https://sonarcloud.io/dashboard/index/uit-python
-ceTaskId=AV5bwPps-ycAxoR9jWWY
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AV5bwPps-ycAxoR9jWWY
+serverVersion=6.6.0.30458
+dashboardUrl=https://sonarcloud.io/dashboard/index/uit-python:master
+ceTaskId=AV7cNafS6oOvObTbiYYQ
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AV7cNafS6oOvObTbiYYQ
