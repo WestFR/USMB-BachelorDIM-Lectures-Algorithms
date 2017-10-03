@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/WestFR/USMB-BachelorDIM-Lectures-Algorithms.svg?branch=master)](https://travis-ci.org/WestFR/USMB-BachelorDIM-Lectures-Algorithms)
+
 # USMB-BachelorDIM-Lectures-Algorithms
 Short courses on algorithms : practical recommendations to build solid, energy efficient and maintainable programs
 
