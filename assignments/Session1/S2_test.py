@@ -101,6 +101,8 @@ def test_average_above_zero (int_fixture, positive_list_fixture, negative_list_f
 	
 	with pytest.raises(ZeroDivisionError) :
 		assert algo.average_above_zero(negative_list_fixture)
+	
+	with pytest.raises(ZeroDivisionError) :
 		assert algo.average_above_zero(zero_list_fixture)
 
 	with pytest.raises(TypeError) :
@@ -152,7 +154,7 @@ def test_roi_bbox (mat_fixture, mat_error_fixture, mat_little_fixture) :
 		assert algo.roi_bbox(mat_error_fixture)
 
 	with pytest.raises(IndexError) :
-	 assert algo.roi_bbox(mat_little_fixture)
+		assert algo.roi_bbox(mat_little_fixture)
 # END ROI BBOX TESTING
 
 
@@ -178,6 +180,8 @@ def test_random_fill(array_empty, array_high, array_normal):
 
 	with pytest.raises(ValueError):
 		assert algo.random_fill_sparse(array_empty,5)
+
+	with pytest.raises(ValueError):
 		assert algo.random_fill_sparse(array_high,30)
 # END RANDOM ARRAY FILLING TESTING
 
