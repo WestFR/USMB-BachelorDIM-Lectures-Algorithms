@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/WestFR/USMB-BachelorDIM-Lectures-Algorithms.svg?branch=master)](https://travis-ci.org/WestFR/USMB-BachelorDIM-Lectures-Algorithms)
 
+[![Coverage Status](https://coveralls.io/repos/github/WestFR/USMB-BachelorDIM-Lectures-Algorithms/badge.svg?branch=master)](https://coveralls.io/github/WestFR/USMB-BachelorDIM-Lectures-Algorithms?branch=master)
+
 # USMB-BachelorDIM-Lectures-Algorithms
 Short courses on algorithms : practical recommendations to build solid, energy efficient and maintainable programs
 
