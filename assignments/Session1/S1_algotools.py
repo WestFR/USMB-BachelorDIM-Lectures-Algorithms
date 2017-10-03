@@ -101,10 +101,8 @@ print(message)
 # RESERVE A TABLE
 # reverse_table function declaration
 # @param input_list : the input list to be scanned.
-# @throws an exception (ValueError) on an empty list
 def reverse_table(input_list):
 
-	"""
 	lastidx = len(input_list)
 
 	for idx in xrange (len(input_list) /2) :
@@ -113,8 +111,9 @@ def reverse_table(input_list):
 
 		input_list[idx] = input_list[lastidx]
 		input_list[lastidx] = poppod;
-	"""
-	return input_list.reverse();
+
+	return input_list
+	#return input_list.reverse();
 
 # Call method & display reverse table
 reverse_table(input_list);
