@@ -113,7 +113,6 @@ def reverse_table(input_list):
 		input_list[lastidx] = poppod;
 
 	return input_list
-	#return input_list.reverse();
 
 # Call method & display reverse table
 reverse_table(input_list);
@@ -191,7 +190,7 @@ import random
 # @throws an exception (ValueError)
 def random_fill_sparse(table, fill):
 
-    char = 'O'
+    char = 'X'
 
     tablelength = table.shape[0]
     nbCells = tablelength * tablelength
