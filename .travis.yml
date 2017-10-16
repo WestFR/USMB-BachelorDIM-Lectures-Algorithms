@@ -1,0 +1,13 @@
+language: python
+python:
+  - "2.7"
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+addons:
+  sonarcloud:
+    organization: westfr-github
+# command to run tests
+script:
+  - pytest --cov .
+  - sonar-scanner        
