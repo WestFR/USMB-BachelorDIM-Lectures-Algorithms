@@ -1,4 +1,9 @@
-'''' import random
+##
+# @author : Francony Steven
+# @brief : A simple dice game with one player and a computer
+##
+
+import random
 
 playerPts = 0
 computerPts = 0
@@ -19,18 +24,18 @@ while playerPts < 100 and computerPts < 100 :
 
 		while wantsToStop == 0 and diceValue != 1:
 			diceValue = random.randint(1, 6)
-			print "Dice value : " + str(diceValue)
+			print "\nDice value : " + str(diceValue)
 
 			if diceValue != 1:
 				turnScore += diceValue
 				print "Your score : " + str(playerPts + turnScore)
-				wantsToStop = input("Do you want stop (0 : no ; 1 : yes) ? ")
+				wantsToStop = input("\nDo you want stop (0 : no ; 1 : yes) ? ")
 				
 				if wantsToStop == 1:
 					playerPts += turnScore
 			
 			else:
-				print "You lost " + str(turnScore) + " points"
+				print "\nYou lost " + str(turnScore) + " points"
 				print "Your current score : " + str(playerPts)
 
 	else:
@@ -39,7 +44,7 @@ while playerPts < 100 and computerPts < 100 :
 		
 		while wantsToStop == 0 and diceValue != 1:
 			diceValue = random.randint(1, 6)
-			print "Dice value : " + str(diceValue)
+			print "\nDice value : " + str(diceValue)
 
 			if diceValue != 1:
 				turnScore += diceValue
@@ -47,13 +52,13 @@ while playerPts < 100 and computerPts < 100 :
 				wantsToStop = random.randint(0, 1)
 
 				if wantsToStop == 1:
-					print "Computer stop"
+					print "\nComputer stop...\n"
 					computerPts += turnScore
 				
 				else:
-					print "Computer continue"
+					print "\nComputer continue...\n"
 			else:
-				print "Computer lost " + str(turnScore) + " points"
+				print "\nComputer lost " + str(turnScore) + " points"
 				print "Computer current score : " + str(computerPts)
 
 
@@ -63,5 +68,3 @@ if playersTurn:
 	print "You win"
 else :
 	print "The computer wins"
-
-'''

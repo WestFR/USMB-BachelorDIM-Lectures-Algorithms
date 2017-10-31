@@ -1,18 +1,25 @@
-# -*- coding : utf-8 -*-
 """
 @author : Steven FRANCONY
-@brief : a simple example of queue publishing or reading whether the argument -read is passed when calling the script
+@brief : a simple example of queue reading
 """
 
-import argparse, os
+import pika
+import os
+
+amqp_url='amqp://itgfanyr:a63KOZk_gxLVV9TX2Gg9VG4ei5iHslX6@puma.rmq.cloudamqp.com/itgfanyr'
+url = os.environ.get('CLOUDAMQP_URL',amqp_url)
+
+params = pika.URLParameters(url)
+connection = pika.BlockingConnection(params)
+
+channel = connection.channel()
+channel.queue_declare(queue='presentation')
+
+def callback(ch, method, properties, body):
+	print(" [X] Received %r" % body)
 
 
-parser = argparse.ArgumentParser(description='Adding an option to read the queues')
-parser.add_argument('-read', action='store_true', help='read the queues')
+channel.basic_consume(callback, queue='presentation', no_ack=True)
+print('[X] Waiting for messages. To exit press CTRL + C')
 
-arg = parser.parse_args().read
-
-if arg:
-	os.system('python simple_queue_read.py')
-else:
-	os.system('python simple_queue_publish.py')
+channel.start_consuming()

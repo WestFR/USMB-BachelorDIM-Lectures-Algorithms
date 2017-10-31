@@ -1,3 +1,8 @@
+"""
+@author : Steven FRANCONY
+@brief : A simple example of queue publishing 
+"""
+
 import pika
 import os
 
@@ -12,4 +17,3 @@ channel.queue_declare(queue="presentation")
 channel.basic_publish(exchange='', routing_key='presentation', body='Hello itgfanyr !')
 
 connection.close()
-

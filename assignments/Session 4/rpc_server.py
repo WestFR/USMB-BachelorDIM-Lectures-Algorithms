@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Oct 24 09:17:15 2017
 @author: Steven Francony
 @brief : Simple example of a remote procedure (server side)
 """
@@ -51,4 +49,5 @@ channel.basic_consume(on_request, queue='rpc_queue')
 # Display messages
 print(" [X] Waiting or messages. To exit press CTRL+C'")
 print(" [x] Awaiting RPC requests")
+
 channel.start_consuming()

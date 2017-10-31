@@ -9,7 +9,7 @@ import os
 import uuid
 import msgpack
 import msgpack_numpy as m
-import numpy as np #if Numpy is required.
+import numpy as np
 
 # Connection paramaters
 amqp_url='amqp://itgfanyr:a63KOZk_gxLVV9TX2Gg9VG4ei5iHslX6@puma.rmq.cloudamqp.com/itgfanyr'
