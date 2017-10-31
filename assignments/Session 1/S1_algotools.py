@@ -6,6 +6,7 @@
 # Input List
 input_list = [1,2,3,4,-7]
 
+
 # AVERAGING :
 # average_above_zero function declaration
 # @param input_list : the input list to be scanned.
