@@ -48,7 +48,7 @@ def max_value(input_list):
 
 	# First check if provided list is not empty
 	if len(input_list) == 0 :
-		raise ValueError("Provided list is empty.");
+		raise ValueError("Provided list is empty.")
 
 	# Init max value
 	max_val = input_list[0];
@@ -77,7 +77,7 @@ def min_value(input_list):
 
 	# First check if provided list is not empty
 	if len(input_list) == 0 :
-		raise ValueError("Provided list is empty.");
+		raise ValueError("Provided list is empty.")
 
 	# Init max value
 	min_val = input_list[0];
