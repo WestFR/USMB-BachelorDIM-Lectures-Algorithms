@@ -8,6 +8,8 @@ install:
 addons:
   sonarcloud:
     organization: westfr-github
+    secure:
+      token: qRwDNTIEWTEJ/WDMApqRKzqlstG02uNJGJ4YxQ2y1U2KWoLewHz4eiEZb9hKV0MD6awiF60lW9m72/9r3p7dLM1MB0nfvqb5GkUOzu2SeYEhm7fa/whrK1uKktk0UawHrfEmjAOrb2BTCv9JLLIUwiUFiYGBdulhfGg/sS/t/n2e1odHiufQtCOJkzJkyNSkZA582G/jJnhMRnx0JTWkGVCjKc4mRIcyywNz5pKKQbKkmmhJW5UCRWXwoNscexSgJb9D+w9PQOIg18F2Y5GAGPLJT5/PHjpehOnHXfbuCkUQCuCISoA2Ml6Xheg7jjS6t9cyIHxQiThBP/cxKxDkC/6olYa6zRv7L+WnDo5cwI0lHEa6/t/znPQ7nxN785t28L0HmmpcE9nyCz7vattB5esMUEySPfhw/CLChkyfFQpoVzlpbw4dx4F0lvcw7+Prt33i55mrzks60MqDGFYGwLTsGw/hKu1b/vfHSa0thXxsX9lOy8WywiSs558fICViLbqOpzC72729rEP6xK3ZTU2NHmzJ713CBwYl6IUjPTlUyC6XP9ZYSovHyfOSiOJ8ctKc3xTwCTndWju5+u4e0Kl1vUvR7cHbwwd5QKj5OUSjfMz6bj/RTiU8Fso+IyXp5aLVHIuBb7x5e3jSI6HNoUHO/02yrF08uS9M3GZ3wSE=
 # command to run tests
 script:
   - pytest --cov .
